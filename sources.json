@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/L05/L05_SOSC_demonstration.ipynb",
+    "path": "HW3\\references\\L05_SOSC_demonstration.ipynb",
+    "sha256": "3c762388194a7816cc28f7371f29f08acd2b840cd67b7817a0fa3ed4b87f8159"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/L06/L06_stabilization_and_scaling.ipynb",
+    "path": "HW3\\references\\L06_stabilization_and_scaling.ipynb",
+    "sha256": "bf1bea0d0ad27f39b8640cdc69fc2ee4c36e8a2cd2925f47200fbea327d6b1e3"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/L06/L06_gradient_descent_and_line_search.ipynb",
+    "path": "HW3\\references\\L06_gradient_descent_and_line_search.ipynb",
+    "sha256": "6fba64fe39affe7ffffe20fb8b6725b1f279aa864670b6cc766949172f8baacd"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/L06/L06_newton_and_quasi_newton.ipynb",
+    "path": "HW3\\references\\L06_newton_and_quasi_newton.ipynb",
+    "sha256": "09791fbc0f7627c0b9608ad1db57904b1d8875d6196f9931a24bde801eac26e5"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/Assignments/HW3/Q6/Q.txt",
+    "path": "HW3\\data\\Q.txt",
+    "sha256": "ea661b3ea997508c42f6fbe88d23ddd66e605cfbbe82b91b9f349e4f99665750"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/Assignments/HW3/Q6/b.txt",
+    "path": "HW3\\data\\b.txt",
+    "sha256": "63d1cb6b3ba9448b1611fdeb57b1828332ab527f62685d70dcae5d60013f23ff"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Ahmed-Bayoumy/MECH559/DEV/Assignments/HW3/Q6/c.txt",
+    "path": "HW3\\data\\c.txt",
+    "sha256": "8b615a02cb75702089775df562cf5792aad84cce578d051e5ef71ef92b429fe6"
+  }
+]
