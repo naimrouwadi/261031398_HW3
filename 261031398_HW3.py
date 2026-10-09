@@ -1,15 +1,10 @@
 # %% [markdown]
-# # HW3 --- Unconstrained Optimization
-#
-# Naim El Rouwadi — Student ID: 261031398
+# # HW3
 # 
-# ## Questions 4, 5 and 6
-# 
-# Each part has one code cell containing its calculations, plots, and results before the next part begins.
-# Written explanations and derivations are in the separate `overleaf/main.tex` project.
+# Naim El Rouwadi | Student ID: 261031398
 
 # %% [markdown]
-# ## Setup: imports and output folders
+# ## Setup
 
 # %%
 from pathlib import Path
@@ -47,15 +42,10 @@ plt.rcParams.update({"font.size": 10, "figure.dpi": 120, "axes.spines.top": Fals
 summary = {"versions": {"numpy": np.__version__, "scipy": scipy.__version__}}
 
 # %% [markdown]
-# ## Question 4 --- Stationary points and Hessian definiteness
-# 
-# $$f(x_1,x_2)=\frac{x_1^3}{3}+x_1x_2+\frac{x_2^2}{2}+2x_2-\frac{2}{3}.$$
-# 
-# Course sources: [L05 SOSC demonstration, Section 2](https://github.com/Ahmed-Bayoumy/MECH559/blob/DEV/L05/L05_SOSC_demonstration.ipynb)
-# and [L06 stabilization and scaling, Section 2](https://github.com/Ahmed-Bayoumy/MECH559/blob/DEV/L06/L06_stabilization_and_scaling.ipynb).
+# ## Question 4
 
 # %% [markdown]
-# ### 4(a) - Stationary points from five initial guesses
+# ### 4(a)
 
 # %%
 def numerical_gradient(func, x, h=1e-6):
@@ -140,7 +130,7 @@ print("Question 4(a) - Stationary points from each initial guess")
 print(q4_stationary_table.to_string(float_format=lambda value: f"{value:.6g}"))
 
 # %% [markdown]
-# ### 4(b) - Hessian classification and Newton's method
+# ### 4(b)
 
 # %%
 # Verify the specific plain-Newton example with analytical derivatives.
@@ -180,18 +170,10 @@ print("\nQuestion 4(b) - Plain Newton result")
 print(q4_newton_table.to_string(float_format=lambda value: f"{value:.6g}"))
 
 # %% [markdown]
-# ## Question 5 --- Rosenbrock function: gradient method vs. Newton's method
-# 
-# $$f(x_1,x_2)=(1-x_1)^2+100(x_2-x_1^2)^2.$$
-# 
-# Course sources: [L06 gradient descent and line search, Section 4](https://github.com/Ahmed-Bayoumy/MECH559/blob/DEV/L06/L06_gradient_descent_and_line_search.ipynb)
-# and [L06 Newton and quasi-Newton, Section 1](https://github.com/Ahmed-Bayoumy/MECH559/blob/DEV/L06/L06_newton_and_quasi_newton.ipynb).
-# 
-# Initial guesses: $(-1.2,1)$, $(-1,-1)$, $(0,0)$, $(1,0)$, $(1,1.2)$.
-# Stopping tolerance: $10^{-3}$; maximum iterations: $5000$.
+# ## Question 5
 
 # %% [markdown]
-# ### 5(a) - Gradient and Newton methods from five initial guesses
+# ### 5(a)
 
 # %%
 def rosen(x):
@@ -295,7 +277,7 @@ print("Question 5(a) - Final solutions, termination criteria, and iterations")
 print(q5_results_table.to_string(float_format=lambda value: f"{value:.8g}"))
 
 # %% [markdown]
-# ### 5(b) - Contour plots of all iterates and convergence
+# ### 5(b)
 
 # %%
 levels = np.array([1e-6, 1e-4, .01, .1, 1, 5, 10, 25, 100, 500, 2000, 10000])
@@ -344,18 +326,10 @@ fig.savefig(FIG / "q5_convergence.png", dpi=210)
 plt.show()
 
 # %% [markdown]
-# ## Question 6 --- Own gradient descent with Armijo line search
-# 
-# $$f(x)=x^TQx+b^Tx+c.$$
-# 
-# Data: [professor's Q6 folder](https://github.com/Ahmed-Bayoumy/MECH559/tree/DEV/Assignments/HW3/Q6).
-# Part (a) uses an independently implemented gradient descent and Armijo search.
-# 
-# Settings: $x_0=0$, $\epsilon_{tol}=10^{-6}$, $k_{max}=5000$,
-# $\alpha_0=1$, $\epsilon=0.15$, $\beta=0.85$.
+# ## Question 6
 
 # %% [markdown]
-# ### 6(a) - Implementation and numerical solution
+# ### 6(a)
 
 # %%
 # 6(a)(i)-(iv) - Termination point, objective value, gradient norm, and iteration count
@@ -427,7 +401,7 @@ print("Question 6(a)(i)-(iv) - Own Armijo gradient descent results")
 print(q6_own_table.to_string())
 
 # %% [markdown]
-# ### 6(b) - FONC solution
+# ### 6(b)
 
 # %%
 xstar = np.linalg.solve(2*Q, -b)
@@ -444,7 +418,7 @@ print("Question 6(b) - FONC solution and objective value")
 print(q6_fonc_table.to_string())
 
 # %% [markdown]
-# ### 6(c) - Comparison with SciPy BFGS
+# ### 6(c)
 
 # %%
 q6_solver_path = [x06.copy()]
